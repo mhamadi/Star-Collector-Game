@@ -88,24 +88,6 @@ function poisonCollect(player, item) {
   }
 }
 
-// when the player collects an item on the screen
-function itemHandler(player, item) {
-  item.kill();
-  if(item.key === 'coin') {
-    currentScore = currentScore + 10;
-  }
-  else if(item.key === 'poison') {
-    currentScore = currentScore - 25;
-  } 
-  else if(item.key === 'star') {
-    currentScore = currentScore + 25;
-  }
-  
-  if (currentScore === winningScore) {
-      createBadge();
-  }
-}
-
 // when the player collects the badge at the end of the game
 function badgeHandler(player, badge) {
   badge.kill();
